@@ -20,3 +20,22 @@ const cars = [
         "img": "https://auto.ndtvimg.com/car-images/big/mercedes-amg/gle-coupe/mercedes-amg-gle-coupe.jpg?v=2"
     }
 ]
+
+function createCar(car){
+  return `
+        <div class="card">
+        <div class="card-img">
+            <img
+                    src="${car.img}"
+                    alt="${car.name}}"
+            />
+        </div>
+        <h3>"${car.name}"</h3>
+        <p>${car.price}</p>
+    </div> `
+}
+
+const templates = cars.map(car => createCar(car))
+const html = templates.join('')
+
+document.querySelector('.list').innerHTML = html

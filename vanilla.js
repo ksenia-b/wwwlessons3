@@ -35,7 +35,9 @@ function createCar(car){
     </div> `
 }
 
+
 const templates = cars.map(car => createCar(car))
+
 const html = templates.join('')
 
 document.querySelector('.list').innerHTML = html
